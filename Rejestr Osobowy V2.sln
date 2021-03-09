@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31019.35
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rejestr Osobowy V2", "Rejestr Osobowy V2\Rejestr Osobowy V2.csproj", "{41633E75-1C94-43E6-8B17-3F9DA3B261E8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{41633E75-1C94-43E6-8B17-3F9DA3B261E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{41633E75-1C94-43E6-8B17-3F9DA3B261E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{41633E75-1C94-43E6-8B17-3F9DA3B261E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{41633E75-1C94-43E6-8B17-3F9DA3B261E8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C0D1726F-0366-47DC-9C38-E02BA24589A2}
+	EndGlobalSection
+EndGlobal
