@@ -9,7 +9,6 @@ namespace Rejestr_Osobowy_V2
         
 
         public List<Person> people = new List<Person>();
-       // List<Address> addresses = new List<Address>();
         public Person p = new Person();
         public Address a = new Address();
         
@@ -68,7 +67,7 @@ namespace Rejestr_Osobowy_V2
                             }
                         case '4':
                             {
-                               // p.EditPerson();
+                                Edit();
                                 break;
                             }
                         case '5':
@@ -162,6 +161,245 @@ namespace Rejestr_Osobowy_V2
             }
 
         }
+
+        public void Edit()
+        {
+            //Pierwsza część menu 
+            int chose;
+            do
+            {
+                try
+                {
+                    DisplayData();
+                    Console.WriteLine("{0}.Powrót", people.Count + 1);
+                    Console.WriteLine("Której osoby dane chcesz edytować ?");
+                    chose = int.Parse(Console.ReadLine());
+
+                    if (chose == people.Count + 1)
+                    {
+                        break;
+                    }
+
+                    else if (chose > people.Count + 1)
+                    {
+                        throw new Exception("Wybrałeś niepoprawną wartość, pod tym indeksem nie widnieje żadna osoba.");
+
+                    }
+                    else
+                    {
+                        break;
+                    }
+
+                }
+                catch (Exception e)
+                {
+                    Console.Clear();
+                    Console.WriteLine("Coś poszło nie tak: " + e.Message);
+                    Console.WriteLine("Naciśnij dowolny klawisz aby kontynuować...");
+                    Console.ReadKey();
+                    Console.Clear();
+                }
+            } while (true);
+
+
+            if (chose != people.Count + 1)
+            {
+                bool wait = true;
+                do
+                {
+
+                    try
+                    {
+
+
+                        Console.Clear();
+                        Console.WriteLine("Wybierz co chcesz edytować");
+                        Console.WriteLine("1.Imię\n2.Nazwisko\n3.Wiek\n4.Płeć\n5.Kod pocztowy\n6.Miasto\n7.Ulia\n8.Numer domu\n9.Numer mieszkania\n0.Powrót");
+                        char option = Console.ReadKey().KeyChar;
+                        Console.Clear();
+
+                        switch (option)
+                        {
+                            case '1':
+                                {
+                                    Console.WriteLine("Podaj nowe imię:");
+                                    string newName = Console.ReadLine();
+                                    if (string.IsNullOrEmpty(newName) || newName.Length > 30)
+                                    {
+                                        throw new Exception("Pole imię nie może być puste oraz dłuższe niż 30 znaków, spróbuj ponownie...");
+                                    }
+                                    people[chose - 1].Name = newName;
+                                    Console.WriteLine("Dane zostały zmienione, naciśnij dowolny przycisk aby kontynuować..");
+                                    Console.ReadKey();
+                                    Console.Clear();
+                                    break;
+                                }
+                            case '2':
+                                {
+
+                                    Console.WriteLine("Podaj nowe nazwisko:");
+                                    string newSurname = Console.ReadLine();
+                                    if (string.IsNullOrEmpty(newSurname) || newSurname.Length > 30)
+                                    {
+                                        throw new Exception("Pole imię nie może być puste oraz dłuższe niż 30 znaków, spróbuj ponownie...");
+                                    }
+                                    people[chose - 1].Surname = newSurname;
+                                    Console.WriteLine("Dane zostały zmienione, naciśnij dowolny przycisk aby kontynuować..");
+                                    Console.ReadKey();
+                                    Console.Clear();
+
+                                    break;
+                                }
+                            case '3':
+                                {
+
+                                    Console.WriteLine("Podaj nowy wiek:");
+                                    int newAge = int.Parse(Console.ReadLine());
+                                    if (newAge > 150 || newAge < 1)
+                                    {
+
+                                        throw new Exception("Minimalny wiek to 1, maksymalny 150, spróbuj ponownie...");
+                                    }
+                                    people[chose - 1].Age = newAge;
+                                    Console.WriteLine("Dane zostały zmienione, naciśnij dowolny przycisk aby kontynuować..");
+                                    Console.ReadKey();
+                                    Console.Clear();
+
+                                    break;
+                                }
+                            case '4':
+                                {
+
+                                    Console.WriteLine("Podaj nową płeć:");
+                                    string newGender = Console.ReadLine();
+                                    if (newGender == "Kobieta" || newGender == "Mężczyzna" || newGender == "mężczyzna" || newGender == "kobieta")
+                                    {
+
+                                    }
+                                    else
+                                    {
+
+                                        throw new Exception("Wprowadzone dane są niepoprawne, spróbuj ponownie...");
+                                    }
+                                    people[chose - 1].Gender = newGender;
+                                    Console.WriteLine("Dane zostały zmienione, naciśnij dowolny przycisk aby kontynuować..");
+                                    Console.ReadKey();
+                                    Console.Clear();
+
+                                    break;
+                                }
+                            case '5':
+                                {
+
+                                    Console.WriteLine("Podaj nowy kod pocztowy:\nWprowadź bez -.");
+                                    int newPostCode = int.Parse(Console.ReadLine());
+                                    if (newPostCode.ToString().Length != 5)
+                                    {
+                                        throw new Exception("Wprowadzoe dane są niepoprawne, przekroczono liczbę znaków.");
+                                    }
+                                    people[chose - 1].Adr.PostCode = newPostCode;
+                                    Console.WriteLine("Dane zostały zmienione, naciśnij dowolny przycisk aby kontynuować..");
+                                    Console.ReadKey();
+                                    Console.Clear();
+
+                                    break;
+                                }
+                            case '6':
+                                {
+
+                                    Console.WriteLine("Podaj nowe miasto");
+                                    string newCity = Console.ReadLine();
+                                    if (string.IsNullOrEmpty(newCity) || newCity.Length > 30)
+                                    {
+                                        throw new Exception("Pole miasto nie może być puste oraz dłuższe niż 30 znaków.");
+                                    }
+                                    people[chose - 1].Adr.City = newCity;
+                                    Console.WriteLine("Dane zostały zmienione, naciśnij dowolny przycisk aby kontynuować..");
+                                    Console.ReadKey();
+                                    Console.Clear();
+
+                                    break;
+                                }
+                            case '7':
+                                {
+
+                                    Console.WriteLine("Podaj nową ulicę");
+                                    string newStreet = Console.ReadLine();
+                                    if (string.IsNullOrEmpty(newStreet) || newStreet.Length > 30)
+                                    {
+                                        throw new Exception("Pole ulica nie może być puste oraz dłuższe niż 30 znaków.");
+                                    }
+                                    people[chose - 1].Adr.Street = newStreet;
+                                    Console.WriteLine("Dane zostały zmienione, naciśnij dowolny przycisk aby kontynuować..");
+                                    Console.ReadKey();
+                                    Console.Clear();
+
+                                    break;
+                                }
+                            case '8':
+                                {
+
+                                    Console.WriteLine("Podaj nowy numer domu");
+                                    int newHouseNumber = int.Parse(Console.ReadLine());
+                                    if (newHouseNumber > 1000 || newHouseNumber < 0)
+                                    {
+                                        throw new Exception("Wprowadzone dane są niepoprawne, maksymalny numer to 1000.");
+                                    }
+                                    people[chose - 1].Adr.HouseNumber = newHouseNumber;
+                                    Console.WriteLine("Dane zostały zmienione, naciśnij dowolny przycisk aby kontynuować..");
+                                    Console.ReadKey();
+                                    Console.Clear();
+
+                                    break;
+
+                                }
+                            case '9':
+                                {
+
+                                    Console.WriteLine("Podaj nowy numer mieszkania\nWprowadź 0 jeżeli chcesz usunąć.");
+                                    int newFlatNumber = int.Parse(Console.ReadLine());
+                                    if (newFlatNumber > 1000 || newFlatNumber < 0)
+                                    {
+                                        throw new Exception("Wprowadzone dane są niepoprawne, maksymalny numer to 1000.");
+                                    }
+                                    people[chose - 1].Adr.FlatNumber = newFlatNumber;
+                                    Console.WriteLine("Dane zostały zmienione, naciśnij dowolny przycisk aby kontynuować..");
+                                    Console.ReadKey();
+                                    Console.Clear();
+
+                                    break;
+                                }
+
+                            case '0':
+                                {
+                                    wait = false;
+                                    break;
+                                }
+
+
+
+                                // default:
+                                //break;
+                        }
+                    }
+                    catch (Exception e)
+                    {
+                        Console.Clear();
+                        Console.WriteLine("Coś poszło nie tak: " + e.Message);
+                        Console.WriteLine("Naciśnij dowolny klawisz aby kontynuować...");
+                        Console.ReadKey();
+                        Console.Clear();
+                    }
+
+                } while (wait == true);
+            }
+            else
+            {
+            }
+
+
+        }
+
     }
 }
 

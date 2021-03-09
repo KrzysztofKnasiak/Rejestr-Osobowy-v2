@@ -2,9 +2,9 @@
 <Memory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <people>
     <Person>
-      <Name>eq</Name>
-      <Surname>w</Surname>
-      <Age>2</Age>
+      <Name>Maria</Name>
+      <Surname>Nowak</Surname>
+      <Age>29</Age>
       <Gender>kobieta</Gender>
       <Adr>
         <addresses>
@@ -17,35 +17,104 @@
             <FlatNumber>2</FlatNumber>
           </Address>
         </addresses>
-        <PostCode>22222</PostCode>
-        <City>w</City>
-        <Street>e</Street>
+        <PostCode>62200</PostCode>
+        <City>Gniezno</City>
+        <Street>Moniuszki</Street>
+        <HouseNumber>3</HouseNumber>
+        <FlatNumber>0</FlatNumber>
+      </Adr>
+    </Person>
+    <Person>
+      <Name>Krzysztof</Name>
+      <Surname>Nowak</Surname>
+      <Age>59</Age>
+      <Gender>Mężczyzna</Gender>
+      <Adr>
+        <addresses>
+          <Address>
+            <addresses />
+            <PostCode>90999</PostCode>
+            <City>Gdańsk</City>
+            <Street>Nowa</Street>
+            <HouseNumber>9</HouseNumber>
+            <FlatNumber>1</FlatNumber>
+          </Address>
+        </addresses>
+        <PostCode>90999</PostCode>
+        <City>Gdańsk</City>
+        <Street>Nowa</Street>
+        <HouseNumber>9</HouseNumber>
+        <FlatNumber>1</FlatNumber>
+      </Adr>
+    </Person>
+    <Person>
+      <Name>Kasia</Name>
+      <Surname>Kowalska</Surname>
+      <Age>23</Age>
+      <Gender>Kobieta</Gender>
+      <Adr>
+        <addresses>
+          <Address>
+            <addresses />
+            <PostCode>63300</PostCode>
+            <City>Kielce</City>
+            <Street>Kokosowa</Street>
+            <HouseNumber>2</HouseNumber>
+            <FlatNumber>1</FlatNumber>
+          </Address>
+        </addresses>
+        <PostCode>63300</PostCode>
+        <City>Kielce</City>
+        <Street>Kokosowa</Street>
         <HouseNumber>2</HouseNumber>
-        <FlatNumber>2</FlatNumber>
+        <FlatNumber>1</FlatNumber>
+      </Adr>
+    </Person>
+    <Person>
+      <Name>Maciej</Name>
+      <Surname>Maciejewski</Surname>
+      <Age>99</Age>
+      <Gender>Mężczyzna</Gender>
+      <Adr>
+        <addresses>
+          <Address>
+            <addresses />
+            <PostCode>99999</PostCode>
+            <City>Warszawa</City>
+            <Street>Mackowa</Street>
+            <HouseNumber>1</HouseNumber>
+            <FlatNumber>0</FlatNumber>
+          </Address>
+        </addresses>
+        <PostCode>99999</PostCode>
+        <City>Warszawa</City>
+        <Street>Mackowa</Street>
+        <HouseNumber>1</HouseNumber>
+        <FlatNumber>0</FlatNumber>
       </Adr>
     </Person>
   </people>
   <p>
-    <Name>eqw</Name>
-    <Surname>ewq</Surname>
-    <Age>2</Age>
-    <Gender>kobieta</Gender>
+    <Name>Maciej</Name>
+    <Surname>Maciejewski</Surname>
+    <Age>99</Age>
+    <Gender>Mężczyzna</Gender>
     <Adr>
       <addresses>
         <Address>
           <addresses />
-          <PostCode>22222</PostCode>
-          <City>2</City>
-          <Street>2</Street>
-          <HouseNumber>2</HouseNumber>
-          <FlatNumber>2</FlatNumber>
+          <PostCode>99999</PostCode>
+          <City>Warszawa</City>
+          <Street>Mackowa</Street>
+          <HouseNumber>1</HouseNumber>
+          <FlatNumber>0</FlatNumber>
         </Address>
       </addresses>
-      <PostCode>22222</PostCode>
-      <City>2</City>
-      <Street>2</Street>
-      <HouseNumber>2</HouseNumber>
-      <FlatNumber>2</FlatNumber>
+      <PostCode>99999</PostCode>
+      <City>Warszawa</City>
+      <Street>Mackowa</Street>
+      <HouseNumber>1</HouseNumber>
+      <FlatNumber>0</FlatNumber>
     </Adr>
   </p>
   <a>
