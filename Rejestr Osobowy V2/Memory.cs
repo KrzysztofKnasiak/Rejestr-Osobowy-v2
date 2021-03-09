@@ -73,7 +73,7 @@ namespace Rejestr_Osobowy_V2
                             }
                         case '5':
                             {
-                                //p.DeletePerson();
+                                Delete();
                                 break;
                             }
                         case '6':
@@ -125,6 +125,42 @@ namespace Rejestr_Osobowy_V2
             { 
                 Console.WriteLine(e.Message);
             }
+        }
+
+        public void Delete()
+        {
+            int chose;
+            DisplayData();
+            Console.WriteLine("{0}.Powrót \n", people.Count + 1);
+
+            try
+            {
+                Console.WriteLine("Którą osobę usunąć z rejestru ?\nWybierz numer przypisany do osoby, którą chcesz usunąć.");
+                chose = int.Parse(Console.ReadLine());
+                if (chose == people.Count + 1)
+                {
+
+                }
+                else
+                {
+                    Console.Clear();
+                    people.RemoveAt(chose - 1);
+                    Console.WriteLine("Osoba została usunięta, naciśnij dowolny przycisk aby kontynuować..");
+                    Console.ReadKey();
+                    Console.Clear();
+                }
+
+            }
+
+            catch (Exception e)
+            {
+                Console.Clear();
+                Console.WriteLine("Coś poszło nie tak: " + e.Message);
+                Console.WriteLine("Naciśnij dowolny klawisz aby kontynuować...");
+                Console.ReadKey();
+                Console.Clear();
+            }
+
         }
     }
 }

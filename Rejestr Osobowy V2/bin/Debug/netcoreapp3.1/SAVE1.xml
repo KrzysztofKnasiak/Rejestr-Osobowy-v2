@@ -24,29 +24,6 @@
         <FlatNumber>2</FlatNumber>
       </Adr>
     </Person>
-    <Person>
-      <Name>eqw</Name>
-      <Surname>ewq</Surname>
-      <Age>2</Age>
-      <Gender>kobieta</Gender>
-      <Adr>
-        <addresses>
-          <Address>
-            <addresses />
-            <PostCode>22222</PostCode>
-            <City>2</City>
-            <Street>2</Street>
-            <HouseNumber>2</HouseNumber>
-            <FlatNumber>2</FlatNumber>
-          </Address>
-        </addresses>
-        <PostCode>22222</PostCode>
-        <City>2</City>
-        <Street>2</Street>
-        <HouseNumber>2</HouseNumber>
-        <FlatNumber>2</FlatNumber>
-      </Adr>
-    </Person>
   </people>
   <p>
     <Name>eqw</Name>
