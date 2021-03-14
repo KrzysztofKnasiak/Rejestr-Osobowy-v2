@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "EF00Npz9ft/ku/528DNdHZOiLwLR45N45qduGZ2fPUq+M6YvTvzGSiJKvYfdDSPwnqKMOpaVzkNXgYvR1xl0VA==",
+  "dgSpecHash": "vfCvd1drg9mjparede+dbn6re76V3Um0H23W57DgDXhL0MHyGASXJ+0/sPNgwbL+N0ZUcFw5UVpnl6Pb3hdYFA==",
   "success": true,
   "projectFilePath": "C:\\Users\\Krzysztof\\source\\repos\\Rejestr Osobowy V2\\Rejestr Osobowy V2\\Rejestr Osobowy V2.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Krzysztof\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.13\\microsoft.netcore.app.host.win-x64.3.1.13.nupkg.sha512"
+  ],
   "logs": []
 }
